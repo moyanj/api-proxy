@@ -30,7 +30,7 @@ struct Config {
     max_body_size_mb: usize,
 
     /// 请求超时时间 (秒)
-    #[arg(long, default_value = "30", env = "REQUEST_TIMEOUT")]
+    #[arg(long, default_value = "3600", env = "REQUEST_TIMEOUT")]
     request_timeout: u64,
 
     /// 连接超时时间 (秒)
@@ -57,7 +57,7 @@ static API_MAPPING: Lazy<HashMap<&'static str, &'static str>> = Lazy::new(|| {
     map.insert("/fireworks", "https://api.fireworks.ai");
     map.insert("/openrouter", "https://openrouter.ai/api");
     map.insert("/cerebras", "https://api.cerebras.ai");
-    map.insert("/test", "http://127.0.0.1:8078");
+    map.insert("/github", "https://api.github.com");
     map
 });
 
