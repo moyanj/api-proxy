@@ -1,5 +1,5 @@
 # 多阶段构建：构建阶段
-FROM rust:1.90-alpine as builder
+FROM rust:1.90-alpine AS builder
 
 # 安装构建依赖
 RUN apk add --no-cache musl-dev pkgconfig openssl-dev
