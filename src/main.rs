@@ -41,23 +41,27 @@ struct Config {
 // API 映射配置 - 使用 HashMap 提高查找性能
 static API_MAPPING: Lazy<HashMap<&'static str, &'static str>> = Lazy::new(|| {
     let mut map = HashMap::new();
-    map.insert("/discord", "https://discord.com/api");
-    map.insert("/telegram", "https://api.telegram.org");
-    map.insert("/openai", "https://api.openai.com");
+    map.insert("/anthropic", "https://api.anthropic.com");
     map.insert("/claude", "https://api.anthropic.com");
-    map.insert("/gemini", "https://generativelanguage.googleapis.com");
-    map.insert("/meta", "https://www.meta.ai/api");
-    map.insert("/groq", "https://api.groq.com/openai");
-    map.insert("/xai", "https://api.x.ai");
-    map.insert("/cohere", "https://api.cohere.ai");
-    map.insert("/huggingface", "https://api-inference.huggingface.co");
-    map.insert("/together", "https://api.together.xyz");
-    map.insert("/novita", "https://api.novita.ai");
-    map.insert("/portkey", "https://api.portkey.ai");
-    map.insert("/fireworks", "https://api.fireworks.ai");
-    map.insert("/openrouter", "https://openrouter.ai/api");
     map.insert("/cerebras", "https://api.cerebras.ai");
-    map.insert("/github", "https://api.github.com");
+    map.insert("/cohere", "https://api.cohere.ai");
+    map.insert("/discord", "https://discord.com/api");
+    map.insert("/fireworks", "https://api.fireworks.ai");
+    map.insert("/gemini", "https://generativelanguage.googleapis.com");
+    map.insert("/groq", "https://api.groq.com/openai");
+    map.insert("/huggingface", "https://api-inference.huggingface.co");
+    map.insert("/meta", "https://www.meta.ai/api");
+    map.insert("/novita", "https://api.novita.ai");
+    map.insert("/nvidia", "https://integrate.api.nvidia.com");
+    map.insert("/oaipro", "https://api.oaipro.com");
+    map.insert("/openai", "https://api.openai.com");
+    map.insert("/openrouter", "https://openrouter.ai/api");
+    map.insert("/portkey", "https://api.portkey.ai");
+    map.insert("/reka", "https://api.reka.ai");
+    map.insert("/telegram", "https://api.telegram.org");
+    map.insert("/together", "https://api.together.xyz");
+    map.insert("/xai", "https://api.x.ai");
+    map.insert("/github", "https://api.github.com"); // 额外保留
     map
 });
 
